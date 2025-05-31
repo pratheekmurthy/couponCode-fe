@@ -42,7 +42,7 @@ const CouponCereation = (props)=>{
             min_Cart_Value : state.min_Cart_Value
         }
 
-        axios.post(`/api/coupon/createCoupon`)
+        axios.post(`http://54.87.204.39:3076/api/coupon/createCoupon`)
             .then((response)=>{
                 console.log(response.data)
             })
@@ -58,7 +58,7 @@ const CouponCereation = (props)=>{
             "cartValue" : state1.cartValue
         }
         console.log(data)
-        axios.post(`/api/coupon/checkDiscount`,data)
+        axios.post(`http://54.87.204.39:3076/api/coupon/checkDiscount`,data)
             .then((response)=>{
                 console.log(response.data.msg)
                 setMsg(response.data.msg)
@@ -71,7 +71,7 @@ const CouponCereation = (props)=>{
     }
 
     useEffect(()=>{
-        axios.get(`/api/coupon/getAllCoupons`)
+        axios.get(`http://54.87.204.39:3076/api/coupon/getAllCoupons`)
         .then((response)=>{
             console.log(response.data.data)
             //setMsg(response.data.msg)
