@@ -90,7 +90,7 @@ const CouponCereation = (props)=>{
         <Grid item xs={0} md={3} lg={3}>
             <h3 align="center">Coupons Available</h3>
             {
-                couponsAvailable.map((ele)=>{
+                couponsAvailable?.map((ele)=>{
                     return (<div>
                         <Card>
                             <CardBody>
@@ -133,7 +133,7 @@ const CouponCereation = (props)=>{
                 <CardTitle><h3>Create Coupon</h3></CardTitle>
                     <CardText>
                         <Label for="exampleEmail">Coupon Name</Label>
-                        <Input id="exampleEmail" name="email" placeholder="eg : sunday500" type="text" onChange={handleChange} name="CouponName" vlaue={state.CouponName}/>
+                        <Input id="exampleEmail"  placeholder="eg : sunday500" type="text" onChange={handleChange} name="CouponName" vlaue={state.CouponName}/>
                         <Label for="exampleSelect">Type of Discount</Label>
                         <Input id="exampleSelect"  type="select" onChange={handleChange} name="typeOfDiscount" vlaue={state.typeOfDiscount}>
                             <option vlaue="">Select Type of Discount</option>
