@@ -42,6 +42,7 @@ const CouponCereation = (props)=>{
             min_Cart_Value : state.min_Cart_Value
         }
 
+        console.log(data)
         axios.post(`http://54.87.204.39:3076/api/coupon/createCoupon`,data)
             .then((response)=>{
                 console.log(response.data)
